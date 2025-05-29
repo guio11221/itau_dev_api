@@ -4,23 +4,23 @@ import { Transform } from 'class-transformer';
 export class AutenticacaoDto {
   @IsString()
   @Transform(({ value }) => value?.trim())
-  chave: string;
+  chave: any;
 
   @IsString()
   @Transform(({ value }) => value?.trim())
-  cert: string;
+  cert: any;
 
   @IsString()
   @Transform(({ value }) => value?.trim())
-  key: string;
+  key: any;
 
   @IsString()
   @Transform(({ value }) => value?.trim())
-  clientId: string;
+  clientId: any;
 
   @IsString()
   @Transform(({ value }) => value?.trim())
-  client_secret: string;
+  client_secret: any;
 
   constructor(data: Partial<AutenticacaoDto>) {
     Object.assign(this, data);
